@@ -2,6 +2,7 @@
 #include <unistd.h>
 #include "benchmarks/sort_benchmark.cpp"
 #include "benchmarks/memory_benchmark.cpp"
+#include "benchmarks/allocation_benchmark.cpp"
 
 int main() {
 
@@ -9,6 +10,7 @@ int main() {
 
     benchmarks::run_sort_benchmark();
     benchmarks::run_memory_benchmark();
+    benchmarks::run_allocation_benchmark();
 
     return 0;
 }

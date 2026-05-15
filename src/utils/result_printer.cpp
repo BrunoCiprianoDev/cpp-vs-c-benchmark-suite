@@ -5,7 +5,7 @@
 
 namespace utils {
 
-void result_printer(std::string name_benchmark, int cpp_time, int c_time) {
+void result_printer(std::string name_benchmark, long long cpp_time, long long c_time) {
 
   std::cout << "\n============================================================="
                "=======\n";

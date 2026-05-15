@@ -30,7 +30,7 @@ void run_sort_benchmark() {
 
   timer.reset();
   std::sort(cpp_vector.begin(), cpp_vector.end());
-  auto cpp_time = timer.elapsed_us();
+  long long cpp_time = timer.elapsed_us();
 
   timer.reset();
   /**
@@ -63,7 +63,7 @@ void run_sort_benchmark() {
     return *(int *)a - *(int *)b;
   });
 
-  auto c_time = timer.elapsed_us();
+  long long c_time = timer.elapsed_us();
 
   utils::result_printer("Ordenação de 1 milhão de inteiros", cpp_time, c_time);
 
