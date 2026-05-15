@@ -1,4 +1,5 @@
 #include "../utils/timer.cpp"
+#include "../utils/result_printer.cpp"
 #include <algorithm>
 #include <cstdlib>
 #include <iostream>
@@ -64,14 +65,7 @@ void run_sort_benchmark() {
 
   auto c_time = timer.elapsed_us();
 
-  std::cout << "Tempo de ordenação em C++: " << cpp_time << "µs\n";
-  std::cout << "Tempo de ordenação em C: " << c_time << "µs\n";
-
-  if (cpp_time < c_time) {
-    std::cout << "C++ foi mais rápido por " << (c_time - cpp_time) << "µs\n";
-  } else if (c_time < cpp_time) {
-    std::cout << "C foi mais rápido por " << (cpp_time - c_time) << "µs\n";
-  }
+  utils::result_printer("Ordenação de 1 milhão de inteiros", cpp_time, c_time);
 
   free(c_vector);
 }
