@@ -1,0 +1,20 @@
+# Como compilar:
+mkdir build
+
+# Entrar em build:
+cd build
+
+# Rodar o cmake
+cmake ..
+
+# Compilar
+make
+
+# Executar app com:
+./app
+
+
+#### Configurar para performace máxima:
+cmake -DCMAKE_BUILD_TYPE=Release ..
+make
+./app
